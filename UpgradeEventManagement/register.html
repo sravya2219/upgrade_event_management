@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="container">
+
+            <a class="navbar-brand">Upgrad Events</a>
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Events</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <h2>Event Registration</h2>
+
+        <!-- Event Details Section -->
+
+        <div class="event-details">
+            <h4>Event Details</h4>
+            <p><b>Event ID:</b> <span id="eventId"></span></p>
+
+            <p><b>Event Name:</b> <span id="eventName"></span></p>
+
+            <p><b>Category:</b> <span id="eventCategory"></span></p>
+
+            <p><b>Date:</b> <span id="eventDate"></span></p>
+
+            <p><b>Time:</b> <span id="eventTime"></span></p>
+
+        </div>
+
+        <!-- Participant Details -->
+
+        <div class="participant-details">
+
+            <h4>Participant Details</h4>
+
+            <form onsubmit="registerEvent(event)">
+                <input type="text" id="firstName" required placeholder="First name">
+                <input type="text" id="lastName" required placeholder="Last name">
+                <input type="email" id="email" required placeholder="Email">
+
+                <button type="submit">Register</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

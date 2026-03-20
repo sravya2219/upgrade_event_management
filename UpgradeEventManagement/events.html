@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Events</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="top-bar">
+
+            <h2>Manage Events</h2>
+
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="box">
+            <form onsubmit="addEvent(event)">
+                <h3>Add Events</h3>
+
+                <input id="id" placeholder="Event ID" required>
+
+                <input id="name" placeholder="Event Name" required>
+
+                <select id="category">
+                    <option>Select Category</option>
+                    <option>Tech & Innovations</option>
+                    <option>Industrial Event</option>
+
+                </select>
+
+                <input id="date" type="date" required>
+
+                <input id="time" type="time" required>
+
+                <input id="url" type="url" placeholder="Event URL" required>
+
+                <button class="add-btn">Add Event</button>
+
+            </form>
+        </div>
+        <div class="box">
+            <h3>Search Event</h3>
+            <div class="search-row">
+                <!-- Select field -->
+                <select id="searchType">
+                    <option value="">Select</option>
+                    <option value="id">Event ID</option>
+                    <option value="name">Event Name</option>
+                    <option value="category">Category</option>
+                </select>
+
+                <!-- Input field -->
+                <input id="searchValue" placeholder="Enter value">
+
+                <!-- Button -->
+                <button onclick="searchEvent()">Search</button>
+            </div>
+
+        </div>
+        <div id="eventList" class="event-grid"></div>
+
+        <script src="events.js"></script>
+
+</body>
+
+</html>
