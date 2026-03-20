@@ -1,6 +1,6 @@
 let db;
 
-let request = indexedDB.open("UpgradEventsDB", 1);
+let request = indexedDB.open("UpgradEventsDB");
 
 request.onupgradeneeded = function(event)
 {
